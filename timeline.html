@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+    </head>
+    <body>
+        <canvas id="canvas1" width="1800" height="60" style="background-color: #2b2f33"></canvas>
+        <div>
+            <button onclick="stopMove()">stop</button>
+            <button onclick="beginMove()">move</button>
+            <button onclick="setTimeParts()">setTimePart</button>
+        </div>
+        <script src="timeline.js"></script>
+        <script>
+            var timeParts1 = [
+                {
+                    start: new Date().getTime() - 3 * 3600 * 1000,
+                    end: new Date().getTime() - 1 * 3600 * 1000,
+                    style: {
+                        background: "rgba(132, 244, 180, 0.498039)"
+                    }
+                }
+            ];
+            var timeParts2 = [
+                {
+                    start: new Date().getTime() - 6 * 3600 * 1000,
+                    end: new Date().getTime() - 4 * 3600 * 1000,
+                    style: {
+                        background: "rgba(255,0,0,0.5)"
+                    }
+                }
+            ];
+            function changeCallback(time) {
+                console.log("TCL: time", time);
+            }
+            var a = new TimeLine("canvas1", new Date().getTime(), timeParts1, true, changeCallback);
+            function stopMove() {
+                a.setIsMove(false);
+            }
+            function beginMove() {
+                a.setIsMove(true);
+            }
+            function setTimeParts() {
+                a.addTimeParts(timeParts2);
+            }
+        </script>
+    </body>
+</html>
