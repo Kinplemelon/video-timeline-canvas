@@ -1,5 +1,5 @@
 ## 简介
-Timeline是一个视频监控播放控制进度条插件,代码主要参考[liaoanran/timeline-canvas](https://panjiachen.github.io/vue-element-admin),因源代码命名习惯及接口较为不方便使用,故重新写了一遍并上传分享.插件类似海康视频管理平台提供的时间轴,支持显示事件区间,滚轮放大缩小,拖动.本人也是菜鸟,欢迎提issue..
+Timeline是一个视频监控播放控制进度条插件,代码主要参考[liaoanran/timeline-canvas](https://github.com/liaoanran/timeline-canvas),因源代码命名习惯及接口较为不方便使用,故重新写了一遍并上传分享.插件类似海康视频管理平台提供的时间轴,支持显示事件区间,滚轮放大缩小,拖动.本人也是菜鸟,欢迎提issue..
 
 ### init
 `new Timeline(canvasId, initTime, timeParts, isMove, timeChangeCallback)`
